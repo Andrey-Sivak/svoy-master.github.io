@@ -32,13 +32,27 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield; }
 
-/*@font-face {
-  font-family: 'Myriad Pro';
-  src: url('../fonts/MYRIADPRO-REGULAR.OTF');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}*/
+@font-face {
+  font-family: 'Museo Sans';
+  src: url("../fonts/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url("../fonts/MuseoSansCyrl-500.eot");
+  src: url("../fonts/MuseoSansCyrl-500.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl-500.woff") format("woff"), url("../fonts/MuseoSansCyrl-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Sans';
+  src: url("../fonts/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
 .container {
   max-width: 1206px;
   padding: 0;
@@ -90,7 +104,7 @@ body,
 html {
   position: relative;
   overflow-x: hidden;
-  font-family: 'IntroHeadB', sans-serif; }
+  font-family: 'Museo Sans', sans-serif; }
 
 .pos-a {
   position: absolute; }
