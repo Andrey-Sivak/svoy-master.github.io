@@ -5,11 +5,11 @@
   padding-top: 172px;
   padding-bottom: 385px;
   margin-bottom: -93px;
-  background-image: url('../../img/first-sec-bg.png');
-  background-size: cover;
-  background-position: center;
+  //background-image: url('../../img/first-sec-bg.png');
+  //background-size: cover;
+  //background-position: center;
 
-  &:before {
+  /*&:before {
     position: absolute;
     content: '';
     top: 0;
@@ -18,7 +18,7 @@
     right: 0;
     background: rgba(255, 255, 255, 0.95);
     z-index: 1;
-  }
+  }*/
 
   &__left-top-img {
     transform: rotate(33deg);
