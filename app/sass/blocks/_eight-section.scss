@@ -3,12 +3,14 @@
   padding-bottom: 75px;
   position: relative;
 
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+
   &__map {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    bottom: 0;
+    flex: 0 0 50%;
+    background-color: rgba(#333, .3);
 
     &_iframe {
       border: none;
@@ -18,9 +20,7 @@
   }
 
   &__content {
-    position: relative;
-    z-index: 4;
-    width: fit-content;
+    flex: 0 0 50%;
   }
 
   &__caption {

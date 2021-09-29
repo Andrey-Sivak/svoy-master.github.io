@@ -642,22 +642,30 @@ input[type="number"] {
   padding-top: 62px;
   padding-bottom: 75px;
   position: relative; }
+  .eight-section__wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .eight-section__map {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    bottom: 0; }
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    background-color: rgba(51, 51, 51, 0.3); }
     .eight-section__map_iframe {
       border: none;
       width: 100%;
       height: 425px; }
   .eight-section__content {
-    position: relative;
-    z-index: 4;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content; }
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%; }
   .eight-section__caption {
     letter-spacing: 0.03em;
     text-transform: uppercase;
