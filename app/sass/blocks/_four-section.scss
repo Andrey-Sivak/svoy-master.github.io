@@ -2,6 +2,25 @@
   position: relative;
   margin-bottom: 144px;
 
+  @include response-to(medium) {
+    margin-bottom: 50px;
+
+    &:before {
+      position: absolute;
+      z-index: 1;
+      content: '';
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: rgba(#fff, .7);
+
+      @include response-to(small) {
+        background-color: rgba(#fff, .9);
+      }
+    }
+  }
+
   &-car {
     position: absolute;
     top: -43px;
@@ -11,19 +30,33 @@
     @include response-to(huge) {
       right: -85px;
     }
+
+    @include response-to(large) {
+      width: 600px;
+      top: 30px;
+      height: auto;
+    }
   }
 
   &__content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 520px;
     width: 100%;
+
+    @include response-to(medium) {
+      max-width: unset;
+    }
 
     &_text {
       color: #888995;
       font-size: 16px;
       line-height: 150%;
       margin-bottom: 10px;
+      
+      @include response-to(medium) {
+        color: #333;
+      }
     }
 
     &_items {
@@ -32,6 +65,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
       margin-top: 22px;
+
+      @include response-to(small) {
+        flex-direction: column;
+      }
     }
 
     &_item {

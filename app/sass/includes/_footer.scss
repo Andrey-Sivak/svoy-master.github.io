@@ -8,6 +8,11 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+
+    @include response-to(small) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__left {
@@ -21,8 +26,17 @@
     display: flex;
     justify-content: space-between;
 
+    @include response-to(small) {
+      flex-direction: column;
+    }
+
     & > div {
       display: flex;
+
+      @include response-to(small) {
+        justify-content: center;
+        margin-top: 20px;
+      }
     }
   }
 
@@ -32,6 +46,14 @@
     color: #888995;
     display: block;
     margin-right: 20px;
+  }
+
+  &__privacy {
+
+    @include response-to(small) {
+      display: block;
+      margin: 5px auto;
+    }
   }
 
   & .link {

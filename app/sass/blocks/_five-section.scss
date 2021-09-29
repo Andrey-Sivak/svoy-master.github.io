@@ -1,13 +1,33 @@
 .five-section {
   margin-bottom: 140px;
 
+  @include response-to(medium) {
+    margin-bottom: 50px;
+  }
+
   .faq {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 
+    @include response-to(small) {
+      flex-direction: column;
+      padding-top: 25px;
+    }
+
     &__item {
       flex: 0 0 31.25%;
+
+      @include response-to(small) {
+        flex: unset;
+        width: 90%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgba(#888995, .2);
+      }
 
       @include on-event {
 
@@ -48,6 +68,12 @@
         width: 100%;
         border-bottom: 1px solid rgba(#888995, .2);
         margin-bottom: 16px;
+
+        @include response-to(small) {
+          border: none;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
       }
     }
   }

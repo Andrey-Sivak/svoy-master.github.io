@@ -24,6 +24,10 @@
       background-repeat: no-repeat;
       background-size: initial;
 
+      @include response-to(small) {
+        display: none!important;
+      }
+
       @include on-event {
         background-color: #3386FF;
       }
@@ -35,6 +39,10 @@
         @include on-event {
           background-image: url('../../img/arrow-rt-white.svg');
         }
+
+        @include response-to(large) {
+          right: calc((100% - 100vw) / 2 + 15px);
+        }
       }
 
       &.prev {
@@ -43,6 +51,10 @@
 
         @include on-event {
           background-image: url('../../img/arrow-lt-white.svg');
+        }
+
+        @include response-to(large) {
+          right: calc((100% - 100vw) / 2 + 75px);
         }
       }
     }

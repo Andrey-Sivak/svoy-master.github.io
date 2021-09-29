@@ -6,7 +6,24 @@
   left: 0;
   width: 100%;
   z-index: 20;
+  @include transition-ease;
   //box-shadow: 0px 3px 10px 4px rgba(#333, .3);
+
+  @include response-to(small) {
+    height: 65px;
+  }
+
+  &.active {
+    height: 100vh;
+
+    .menu {
+      transform: translateX(-50%) translateY(0);
+
+      &__item {
+        transform: translateX(0);
+      }
+    }
+  }
 
   &__wrap {
     display: flex;
@@ -15,7 +32,15 @@
   }
 
   &__logo {
+    @include flex-center();
 
+    &_img {
+
+      @include response-to(medium) {
+        width: 120px;
+        height: auto;
+      }
+    }
   }
 
   &__phone {
@@ -23,9 +48,58 @@
     display: block;
     padding: 5px 0;
     font-weight: 700;
+    white-space: nowrap;
 
     @include on-event {
       text-decoration: underline;
+    }
+  }
+
+  .mob-menu-btn {
+    display: none;
+    cursor: pointer;
+
+    @include response-to(small) {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background-color: #000;
+      position: relative;
+      @include transition-ease;
+      opacity: 1;
+
+      &:before,
+      &:after {
+        position: absolute;
+        width: 24px;
+        transform: translateX(-50%);
+        left: 50%;
+        content: '';
+        height: 3px;
+        @include transition-ease;
+        background-color: #000;
+      }
+
+      &:before {
+        top: 7px;
+      }
+
+      &:after {
+        bottom: 7px;
+      }
+
+      &.active {
+        transform: translateX(0) rotate(45deg);
+
+        &:before {
+          width: 0;
+        }
+
+        &:after {
+          transform: translateX(-50%) rotate(90deg);
+          bottom: 0;
+        }
+      }
     }
   }
 }

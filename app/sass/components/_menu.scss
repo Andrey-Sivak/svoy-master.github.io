@@ -2,20 +2,48 @@
   max-width: 665px;
   width: 100%;
 
+  @include response-to(large) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  @include response-to(small) {
+    position: absolute;
+    top: 70px;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100vh);
+  }
+
   &__wrap {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include response-to(small) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     position: relative;
+    @include transition-ease;
+
+    @include response-to(small) {
+      transform: translateX(100vw);
+      margin-bottom: 10px;
+    }
 
     &_link {
       padding: 5px 0;
       display: block;
       font-size: 16px;
+
+      @include response-to(small) {
+        font-weight: 700;
+        font-size: 20px;
+      }
     }
 
     &:before {
@@ -35,5 +63,11 @@
         width: 100%;
       }
     }
+  }
+}
+
+@for $i from 1 through 6 {
+  .menu__item:nth-child(#{$i}) {
+    transition-delay: ( $i * .1s ) + 0.15s;
   }
 }

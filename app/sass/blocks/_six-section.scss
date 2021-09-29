@@ -8,12 +8,34 @@
   background-color: #3E51B3;
   margin-bottom: 140px;
 
+  @include response-to(medium) {
+    margin-bottom: 50px;
+  }
+
+  @include response-to(large) {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  @include response-to(medium) {
+    padding: 45px 15px;
+  }
+
   .faq__form {
     display: flex;
     padding-top: 40px;
     border-top: 1px solid rgba(#fff, .5);
     width: 100%;
     align-items: center;
+
+    @include response-to(medium) {
+      flex-direction: column;
+    }
+
+    @include response-to(small) {
+      border: none;
+      padding-top: 0;
+    }
 
     &_wrap {
       display: flex;
@@ -22,6 +44,16 @@
       margin-right: 60px;
       border-radius: 10px;
       align-items: center;
+
+      @include response-to(medium) {
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 30px;
+      }
+
+      @include response-to(small) {
+        flex-direction: column;
+      }
     }
 
     &_input {
@@ -32,6 +64,14 @@
       width: 172px;
       margin-right: 40px;
       display: block;
+
+      @include response-to(small) {
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
 
       &::placeholder {
         font-size: inherit;
@@ -46,6 +86,11 @@
       line-height: 86.18%;
       width: 220px;
       padding: 17px 0;
+
+      @include response-to(small) {
+        padding: 12px 0;
+        font-size: 18px;
+      }
     }
 
     &_socials {
@@ -54,12 +99,15 @@
     }
 
     &_social {
-      margin-right: 28px;
       transform: translateY(0);
       @include transition-ease;
 
       @include on-event {
         transform: translateY(-5px);
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 28px;
       }
     }
   }
