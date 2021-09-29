@@ -653,9 +653,9 @@ input[type="number"] {
             align-items: center; }
   .eight-section__map {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
+    -webkit-flex: 0 0 60%;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
     background-color: rgba(51, 51, 51, 0.3); }
     .eight-section__map_iframe {
       border: none;
@@ -663,9 +663,9 @@ input[type="number"] {
       height: 425px; }
   .eight-section__content {
     -webkit-box-flex: 0;
-    -webkit-flex: 0 0 50%;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%; }
+    -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%; }
   .eight-section__caption {
     letter-spacing: 0.03em;
     text-transform: uppercase;
