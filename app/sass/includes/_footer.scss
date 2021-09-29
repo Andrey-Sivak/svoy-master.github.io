@@ -1,0 +1,40 @@
+.footer {
+  background-color: #F5F8FA;
+  padding-top: 23px;
+  padding-bottom: 26px;
+
+  &__wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__right {
+    max-width: 512px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 150%;
+    color: #888995;
+    display: block;
+    margin-right: 20px;
+  }
+
+  & .link {
+    font-size: 14px;
+  }
+}

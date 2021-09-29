@@ -1,3 +1,5 @@
+@import "libs/slick";
+
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -6,13 +8,31 @@
 @import "base/typography";
 @import "base/base";
 
+@import "blocks/first-section";
+@import "blocks/second-section";
+@import "blocks/third-section";
+@import "blocks/four-section";
+@import "blocks/five-section";
+@import "blocks/six-section";
+@import "blocks/seven-section";
+@import "blocks/eight-section";
+
+@import "includes/header";
+@import "includes/footer";
+
 @import "components/loader";
+@import "components/menu";
 
 body,
 html {
   position: relative;
   overflow-x: hidden;
   font-family: 'Museo Sans', sans-serif;
+  color: #50515A;
+}
+
+body {
+  padding-top: 87px;
 }
 
 .pos-a {
@@ -21,4 +41,100 @@ html {
 
 .pos-r {
   position: relative;
+}
+
+.btn {
+  display: block;
+  border: 2px solid $red-color;
+  box-shadow: 0px 18px 20px -14px rgba(252, 54, 55, 0.25);
+  border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.05em;
+  font-size: 22px;
+  line-height: 86.18%;
+  font-weight: 700;
+  padding: 24px 0;
+  @include transition-ease;
+
+  &-red {
+    background-color: $red-color;
+    color: #fff;
+
+    @include on-event {
+      background-color: #fff;
+      color: $red-color;
+    }
+  }
+
+  &-white {
+    background-color: #fff;
+    color: $red-color;
+
+    @include on-event {
+      border-color: #fff;
+      background-color: $red-color;
+      color: #fff;
+    }
+  }
+}
+
+.link {
+  color: #3386FF;
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 150%;
+  display: block;
+  width: fit-content;
+
+  @include on-event {
+    text-decoration: none;
+  }
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 50px;
+
+  &.white {
+    color: #fff;
+
+    .section-header__text {
+      color: inherit;
+    }
+  }
+
+  &.reverse {
+    display: flex;
+    flex-direction: column;
+
+    .section-header__caption {
+      order: 2;
+      margin-bottom: 0;
+      margin-top: 16px;
+    }
+  }
+  
+  &__caption {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #888995;
+  }
+
+  &__link {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
 }

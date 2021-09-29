@@ -1,0 +1,66 @@
+.six-section {
+  border-radius: 15px;
+  position: relative;
+  background-image: url('../../img/six-section-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding: 96px 80px;
+  background-color: #3E51B3;
+  margin-bottom: 140px;
+
+  .faq__form {
+    display: flex;
+    padding-top: 40px;
+    border-top: 1px solid rgba(#fff, .5);
+    width: 100%;
+    align-items: center;
+
+    &_wrap {
+      display: flex;
+      padding: 8px;
+      background-color: #fff;
+      margin-right: 60px;
+      border-radius: 10px;
+      align-items: center;
+    }
+
+    &_input {
+      font-size: 16px;
+      line-height: 19px;
+      color: #888995;
+      padding-left: 32px;
+      width: 172px;
+      margin-right: 40px;
+      display: block;
+
+      &::placeholder {
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+        font-family: 'Museo Sans', sans-serif;
+      }
+    }
+
+    &_btn {
+      font-size: 20px;
+      line-height: 86.18%;
+      width: 220px;
+      padding: 17px 0;
+    }
+
+    &_socials {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &_social {
+      margin-right: 28px;
+      transform: translateY(0);
+      @include transition-ease;
+
+      @include on-event {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

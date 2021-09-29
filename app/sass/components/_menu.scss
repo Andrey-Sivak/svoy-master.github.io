@@ -1,0 +1,39 @@
+.menu {
+  max-width: 665px;
+  width: 100%;
+
+  &__wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+    &_link {
+      padding: 5px 0;
+      display: block;
+      font-size: 16px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      left: 0;
+      bottom: 3px;
+      height: 1px;
+      background-color: #000;
+      @include transition-ease;
+    }
+
+    @include on-event {
+
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.third-section {
+  padding: 95px 0;
+  background-color: #3E51B3;
+  background-image: url('../../img/third-sec-bg.svg');
+  background-size: initial;
+  background-position: calc(100% + 454px) center;
+  background-repeat: no-repeat;
+  margin-bottom: 261px;
+
+  &__advantages {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+
+  &__advantage {
+    width: 291px;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-start;
+    padding: 28px 5px 19px;
+
+    &_icon {
+      margin-right: 20px;
+    }
+
+    &_content {
+      margin-top: 6px;
+    }
+
+    &_title {
+      font-size: 24px;
+      line-height: 29px;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    &_text {
+      font-size: 16px;
+      line-height: 150%;
+      color: #fff;
+    }
+  }
+}

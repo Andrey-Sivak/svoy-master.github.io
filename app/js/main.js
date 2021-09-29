@@ -1,6 +1,7 @@
 'use strict';
 import * as $ from 'jquery';
 import './jquery.inputmask.min';
+import './slick.min';
 
 
 const mobileWidth = 767;
@@ -42,6 +43,30 @@ window.addEventListener('load', function () {
             loader.parentElement.removeChild(loader);
         }, 1500);
 
+    })();
+
+    (function slider() {
+        if (!document.querySelector('.seven-section__slider')) {
+            return;
+        }
+
+        $('.seven-section__slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            swipeToSlide: true,
+            prevArrow: '<span class="slider-arrow prev"></span>',
+            nextArrow: '<span class="slider-arrow next"></span>',
+            responsive: [
+                /*{
+                    breakpoint: 475,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },*/
+            ]
+        })
     })();
 
     (function inputMask() {

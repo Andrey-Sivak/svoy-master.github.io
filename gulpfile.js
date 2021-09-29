@@ -38,10 +38,10 @@ function fonts() {
 function styles() {
 
 	return gulp.src('./app/sass/**/*.scss')
-		.pipe(sourcemaps.init())
+		// .pipe(sourcemaps.init())
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(postcss([ autoprefixer() ]))
-		.pipe(sourcemaps.write('.'))
+		// .pipe(sourcemaps.write('.'))
 		.pipe(replace('../../', '../'))
 		.pipe(gulp.dest('./dist/css'))
 		.pipe(browserSync.stream());

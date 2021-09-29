@@ -1,0 +1,63 @@
+.seven-section {
+  margin-bottom: 20px;
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    width: 104%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .slider-arrow {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      border: 1px solid #3386FF;
+      display: block;
+      background-color: #fff;
+      @include transition-ease;
+      border-radius: 50%;
+      top: -113px;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: initial;
+
+      @include on-event {
+        background-color: #3386FF;
+      }
+
+      &.next {
+        right: calc((100% - 1280px) / 2);
+        background-image: url('../../img/arrow-rt-blue.svg');
+
+        @include on-event {
+          background-image: url('../../img/arrow-rt-white.svg');
+        }
+      }
+
+      &.prev {
+        background-image: url('../../img/arrow-lt-blue.svg');
+        right: calc((100% - 1280px) / 2 + 60px);
+
+        @include on-event {
+          background-image: url('../../img/arrow-lt-white.svg');
+        }
+      }
+    }
+
+    &_item {
+      flex: 0 0 32.41%;
+      margin: 0 10px;
+      border-radius: 10px;
+      overflow: hidden;
+      @include flex-center();
+
+      &-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
