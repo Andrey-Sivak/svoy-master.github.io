@@ -1,0 +1,137 @@
+.page {
+  padding-top: 50px;
+
+  &-title {
+
+    &.small {
+      color: #888995;
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 19px;
+      font-weight: normal;
+    }
+  }
+
+  .title {
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+
+    @include response-to(small) {
+      font-size: 22px;
+      line-height: 120%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 150%;
+
+    @include response-to(small) {
+      font-size: 15px;
+      line-height: 120%;
+    }
+  }
+
+  &-content {
+    margin-bottom: 90px;
+
+    &.col {
+      display: flex;
+      align-items: flex-start;
+
+      @include response-to(medium) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &__right {
+      flex: 0 0 400px;
+      margin-left: 39px;
+
+      @include response-to(medium) {
+        flex: 0 0 100%;
+        margin-left: 0;
+
+        .title {
+          text-align: center;
+        }
+      }
+
+      .item {
+        flex: 0 0 100%;
+
+        @include response-to(medium) {
+          flex: 0 0 45%;
+        }
+      }
+    }
+
+    &__left {
+
+      &_content {
+        margin-bottom: 50px;
+      }
+
+      &_items {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include response-to(small) {
+          flex-wrap: wrap;
+        }
+      }
+
+      &_item {
+        flex: 0 0 32%;
+
+        @include response-to(small) {
+          flex: 0 0 100%;
+          margin-bottom: 20px;
+        }
+
+        &-text {
+          font-size: 16px;
+          line-height: 150%;
+          height: 44px;
+          padding-left: 25px;
+          position: relative;
+
+          &:before {
+            width: 5px;
+            height: 5px;
+            content: '';
+            position: absolute;
+            top: 9px;
+            border-radius: 50%;
+            background-color: #50515A;
+            left: 10px;
+          }
+        }
+
+        &-img {
+          background-size: cover;
+          background-position: center;
+          background-color: #E5E5E5;
+          border: 1px solid #A0A0A0;
+          border-radius: 8px;
+          height: 267px;
+          @include transition-ease;
+          transform: scale(1);
+
+          @include on-event {
+            transform: scale(1.05);
+          }
+
+          @include response-to(large) {
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+}

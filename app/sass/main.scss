@@ -16,6 +16,7 @@
 @import "blocks/six-section";
 @import "blocks/seven-section";
 @import "blocks/eight-section";
+@import "blocks/page";
 
 @import "includes/header";
 @import "includes/footer";
@@ -177,6 +178,3 @@ body {
   }
 }
 
-.page {
-  padding-top: 50px;
-}
