@@ -1511,6 +1511,74 @@ input[type="number"] {
   -webkit-transition-delay: 0.75s;
           transition-delay: 0.75s; }
 
+.accordion {
+  margin-left: 33px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(136, 137, 149, 0.2);
+  margin-bottom: 26px; }
+  .accordion__header {
+    margin-left: -33px;
+    padding-left: 33px;
+    position: relative;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    font-size: 24px;
+    line-height: 29px;
+    cursor: pointer; }
+    .accordion__header:before {
+      position: absolute;
+      content: '';
+      left: 7px;
+      top: 6px;
+      -webkit-transition: all ease-in-out .3s;
+      transition: all ease-in-out .3s;
+      width: 8px;
+      height: 14px;
+      background-image: url("../img/accordion-arrow.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+    .accordion__header_caption {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+  .accordion__body {
+    overflow: hidden;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
+    margin-top: 0;
+    max-height: 0; }
+    .accordion__body .btn {
+      width: 221px;
+      padding: 17px 0;
+      font-size: 20px;
+      margin-top: 40px; }
+  .accordion.active .accordion__body {
+    max-height: 2000px;
+    margin-top: 40px; }
+
+.list {
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 150%; }
+  .list__title {
+    margin-bottom: 20px; }
+  .list__wrap {
+    margin-bottom: 20px; }
+  .list__item {
+    padding-left: 24px;
+    position: relative; }
+    .list__item:before {
+      position: absolute;
+      content: '';
+      width: 5px;
+      height: 5px;
+      background-color: #50515A;
+      border-radius: 50%;
+      left: 9px;
+      top: 9px; }
+
 body,
 html {
   position: relative;
@@ -1612,6 +1680,8 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 16px; }
+    .section-header__caption.lower {
+      text-transform: capitalize; }
     @media (max-width: 767px) {
       .section-header__caption {
         margin-bottom: 10px;

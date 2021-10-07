@@ -23,6 +23,8 @@
 
 @import "components/loader";
 @import "components/menu";
+@import "components/accordion";
+@import "components/list";
 
 body,
 html {
@@ -142,6 +144,11 @@ body {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 16px;
+
+    
+    &.lower {
+      text-transform: capitalize;
+    }
 
     @include response-to(small) {
       margin-bottom: 10px;

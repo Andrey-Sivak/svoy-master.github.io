@@ -91,6 +91,24 @@ window.addEventListener('load', function () {
         });
     })();
 
+    (function accordion() {
+        if (!document.querySelector('.accordion')) {
+            return;
+        }
+
+        const accordions = [...document.querySelectorAll('.accordion')];
+
+        accordions.forEach(a => {
+            const header = a.querySelector('.accordion__header');
+            header.addEventListener('click', accordionToggle);
+        });
+
+        function accordionToggle(e) {
+            e.preventDefault();
+           this.parentElement.classList.toggle('active');
+        }
+    })();
+
 });
 
 function checkWidth() {
