@@ -69,6 +69,20 @@
       @include response-to(small) {
         flex-direction: column;
       }
+
+      &.row {
+        margin-top: 0;
+        margin-bottom: 120px;
+
+        @include response-to(small) {
+          margin-bottom: 50px;
+        }
+
+        .four-section__content_item {
+          flex: unset;
+          width: fit-content;
+        }
+      }
     }
 
     &_item {

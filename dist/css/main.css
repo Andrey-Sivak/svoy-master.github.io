@@ -617,6 +617,20 @@ input[type="number"] {
           -webkit-flex-direction: column;
               -ms-flex-direction: column;
                   flex-direction: column; } }
+      .four-section__content_items.row {
+        margin-top: 0;
+        margin-bottom: 120px; }
+        @media (max-width: 767px) {
+          .four-section__content_items.row {
+            margin-bottom: 50px; } }
+        .four-section__content_items.row .four-section__content_item {
+          -webkit-box-flex: unset;
+          -webkit-flex: unset;
+              -ms-flex: unset;
+                  flex: unset;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content; }
     .four-section__content_item {
       -webkit-box-flex: 0;
       -webkit-flex: 0 0 46%;
@@ -1201,6 +1215,67 @@ input[type="number"] {
         @media (max-width: 1290px) {
           .page-content__left_item-img {
             height: 200px; } }
+  .page .about {
+    margin-bottom: 30px; }
+    .page .about__col {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 calc(50% - 40px);
+          -ms-flex: 0 0 calc(50% - 40px);
+              flex: 0 0 calc(50% - 40px); }
+      @media (max-width: 992px) {
+        .page .about__col {
+          -webkit-box-flex: 0;
+          -webkit-flex: 0 0 100%;
+              -ms-flex: 0 0 100%;
+                  flex: 0 0 100%; } }
+    .page .about__images {
+      margin-left: 75px;
+      margin-top: 25px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      width: 100%; }
+      @media (max-width: 992px) {
+        .page .about__images {
+          margin-left: 0; } }
+      .page .about__images_img {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 calc(50% - 10px);
+            -ms-flex: 0 0 calc(50% - 10px);
+                flex: 0 0 calc(50% - 10px);
+        height: 210px;
+        background-position: center;
+        background-size: cover;
+        background-color: #999;
+        margin-bottom: 20px;
+        border-radius: 5px; }
+        @media (max-width: 992px) {
+          .page .about__images_img {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 calc(25% - 10px);
+                -ms-flex: 0 0 calc(25% - 10px);
+                    flex: 0 0 calc(25% - 10px); } }
+        @media (max-width: 767px) {
+          .page .about__images_img {
+            -webkit-box-flex: 0;
+            -webkit-flex: 0 0 80%;
+                -ms-flex: 0 0 80%;
+                    flex: 0 0 80%;
+            max-width: 350px;
+            margin-left: auto;
+            margin-right: auto; } }
 
 .header {
   background: #F5F8FA;
@@ -1537,7 +1612,10 @@ input[type="number"] {
       background-image: url("../img/accordion-arrow.svg");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain; }
+      background-size: contain;
+      -webkit-transform: rotate(0);
+          -ms-transform: rotate(0);
+              transform: rotate(0); }
     .accordion__header_caption {
       -webkit-user-select: none;
          -moz-user-select: none;
@@ -1557,6 +1635,10 @@ input[type="number"] {
   .accordion.active .accordion__body {
     max-height: 2000px;
     margin-top: 40px; }
+  .accordion.active .accordion__header:before {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
 
 .list {
   margin-bottom: 20px;
@@ -1565,7 +1647,7 @@ input[type="number"] {
   .list__title {
     margin-bottom: 20px; }
   .list__wrap {
-    margin-bottom: 20px; }
+    margin: 20px 0; }
   .list__item {
     padding-left: 24px;
     position: relative; }

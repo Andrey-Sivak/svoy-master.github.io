@@ -25,6 +25,7 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
+      transform: rotate(0);
     }
 
     &_caption {
@@ -51,6 +52,10 @@
     .accordion__body {
       max-height: 2000px;
       margin-top: 40px;
+    }
+
+    .accordion__header:before {
+      transform: rotate(90deg);
     }
   }
 }
