@@ -181,4 +181,145 @@
       }
     }
   }
+
+  .single-service {
+
+    &__coasts {
+      padding: 20px 27px;
+      border-radius: 10px;
+      border: 1px solid rgba(#888995, .2);
+      margin-bottom: 40px;
+
+      @include response-to(small) {
+        padding: 20px 0;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+      }
+
+      &_item {
+
+        &:not(:last-of-type) {
+          margin-bottom: 25px;
+        }
+      }
+
+      &_title {
+        font-size: 20px;
+        line-height: 120%;
+        font-weight: 700;
+
+        @include response-to(small) {
+          font-size: 18px;
+        }
+      }
+
+      &_coast {
+        font-size: 16px;
+        line-height: 150%;
+        color: #888995;
+      }
+    }
+
+    .text-grey {
+      font-size: 16px;
+      line-height: 150%;
+      color: #888995;
+      margin-bottom: 40px;
+
+      a {
+
+        @include on-event {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .btn {
+      width: 221px;
+      padding: 17px 0;
+      font-size: 20px;
+      line-height: 86.18%;
+    }
+
+    &__list {
+      margin-top: 140px;
+
+      @include response-to(medium) {
+        margin-top: 50px;
+      }
+
+      &_caption {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 40px;
+      }
+
+      ol {
+        margin-top: 0;
+        padding-left: 18px;
+
+        li {
+          list-style-type: decimal;
+          font-size: 16px;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .services {
+
+    .items {
+
+      .item {
+        flex: 0 0 23.83%;
+
+        @include response-to(medium) {
+          flex: 0 0 43%;
+        }
+
+        &_img-wrap {
+          height: 194px;
+        }
+
+        &_text {
+          font-weight: 300;
+          font-size: 20px;
+          line-height: 24px;
+          color: #888995;
+          height: auto;
+          padding-bottom: 18px;
+        }
+      }
+    }
+
+    &__description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include response-to(medium) {
+        display: block;
+      }
+
+      &_col {
+        max-width: 610px;
+        width: 100%;
+
+        @include response-to(medium) {
+          max-width: unset;
+        }
+
+        &:first-of-type {
+          margin-right: 20px;
+
+          @include response-to(medium) {
+            margin-right: 0;
+            margin-bottom: 25px;
+          }
+        }
+      }
+    }
+  }
 }
